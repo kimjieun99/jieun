@@ -155,7 +155,7 @@
                 $("#alarmMsg").fadeIn(3000).fadeOut(9000);
                 const tempHtml = `
               <div>
-                <div style="text-align:center";><span>${response.msg}</span></div>
+                <div style="text-align:center;"><span>${response.msg}</span></div>
                 <div class="row text-center mt-2">
                   <div class="col">
                     <button id="btnAlarmConfirm" class="btn btn-outline-danger" style="padding:5px 10px; font-size:20px;">
@@ -169,6 +169,7 @@
               </div>
               `;
                 $("#alarmMsg").html(tempHtml);
+                gsap.to("#alarmMsg", {y: -110, duration: 1});
               } else {
               }
             },
